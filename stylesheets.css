@@ -1,62 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-html, body {
-    height: 100%;
-}
-div#default {
-    float: left;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-div#default ul {
-    float: left;
-    width: 100%;
-    height: 100%;
-}
-div#default ul li {
-    float: left;
-    position: relative;
-    width: 100%;
-    height: calc(100% - 30px);
-    padding-top: 30px;
-}
-div#default ul li#section-one {
-    background-color: red;
-}
-div#default ul li#section-two {
-    background-color: blue;
-}
-div#default ul li#section-three {
-    background-color: green;
-}
-div#nvgtion {
-    float: left;
-    height: 30px;
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-}
-div#nvgtion ul {
-    float: left;
-}
-div#nvgtion ul li {
-    float: left;
-    list-style: none;
-}
-div#nvgtion ul li a {
-    float: left;
-}
-div.middle {
-    width: 800px;
-    height: 600px;
-    background-color: white;
-    position: absolute;
-    left: 50%;
-    margin-left: -400px;
-    top: 50%;
-    margin-top: -300px;
-}
+* { margin: 0; padding: 0; }
+html, body {height: 100%;}
+
+div#default { float: left; width: 100%; height: 100%; z-index: 10; }
+div#default > ul { float: left; width: 100%; height: 100%; }
+div#default > ul > li { float: left; position: relative; width: 100%; height: calc(100% - 30px); padding-top: 30px; }
+div#default > ul > li#section-one {background-color: red;}
+div#default > ul > li#section-two {background-color: blue;}
+div#default > ul > li#section-three {background-color: green;}
+
+div#nvgtion { float: left; height: 30px; background-color: white; position: fixed; width: 100%; z-index: 20; }
+div#nvgtion ul {float: left;}
+div#nvgtion ul li { float: left; list-style: none; }
+div#nvgtion ul li a {float: left;}
+
+div#gallery { position: relative; z-index: 10; }
+div#gallery ul {}
+div#gallery ul li {}
+div#gallery ul li a {}
+div#gallery-controller { position: relative; z-index: 20; }
+div#gallery-navigation { position: relative; z-index: 30; }
+div#gallery-navigation li.activeSlide {background-color: black;}
+
+div.middle { width: 800px; height: 600px; background-color: white; position: absolute; left: 50%; margin-left: -400px; top: 50%; margin-top: -300px; }
