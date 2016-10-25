@@ -1,0 +1,39 @@
+* { margin: 0; padding: 0; }
+html, body {
+    height: 100%;
+}
+div#default {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+div#default ul {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+div#default ul li {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;    
+}
+div#default ul li#section-one {
+    background-color: red;
+}
+div#default ul li#section-two {
+    background-color: blue; 
+}
+div#default ul li#section-three {
+    background-color: green;
+}
+div.middle {
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -300px;
+}
