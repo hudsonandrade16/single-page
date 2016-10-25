@@ -10,38 +10,37 @@
         <script type="text/javascript">
         $(function() {
             $('div#gallery ul').cycle({
-                timeout: 0,
-                prev: 'gallery-controller-prev',
+                timeout: 5,
+                prev: '#gallery-controller-prev',
                 next: '#gallery-controller-next',
                 pager: '#gallery-navigation',
                 pagerAnchorBuilder: function (idx, slide) {
-                    return '<li><a href="#">'+(idx+1)+'</a></li>';
+                    return '<li id="gallery-list" ><a href="#"><img src="images/circle.png" alt="Circle"> </img></a>   </li>';
                 }
             });
         });
-</script>
+        </script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) { 
+                $(".scroll").click(function(event) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({ scrollTop: $(this.hash).offset().top }, 800);
+                });
+            });
+       </script>    
+
     </head>
     <body>
         <div id="nvgtion">
-            <ul>
-                <li><a href="#section-one">Go to page #01</a></li>
-                <li><a href="#section-two">Go to page #02</a></li>
-                <li><a href="#section-three">Go to page #03</a></li>
+            <ul id="menu">
+                <li><a href="#section-one" class="scroll">Home</a></li>
+                <li><a href="#section-two" class="scroll">Go to page #02</a></li>
+                <li><a href="#section-three" class="scroll">Go to page #03</a></li>
             </ul>
         </div>
         <div id="default">
             <ul>
                 <li id="section-one">
-                    <div class="middle">
-                        <p><a href="#section-two">Go to page #02</a></p>
-                    </div>
-                </li>
-                <li id="section-two">
-                    <div class="middle">
-                        <p><a href="#section-three">Go to page #03</a></p>
-                    </div>
-                </li>
-                <li id="section-three">
                     <div class="middle">
                         <div id="gallery">
                             <ul>
@@ -51,11 +50,29 @@
                                 <li><img src="images/mouse-1708347_640.jpg" /></li>
                             </ul>
                         </div>
+                        <div id="banner">
+                           <h1> Seja a mudança que o mundo precisa!</h1>  
+                           <input type="button" value="Saiba mais">   
+                        </div>
                         <div id="gallery-controller">
-                            <a href="#" id="gallery-controller-prev">Prev</a> 
-                            <a href="#" id="gallery-controller-next">Next</a>
+                            <a href="#" id="gallery-controller-prev">
+                                <img src="images/left.png" alt="Prev"> </img>
+                            </a> 
+                            <a href="#" id="gallery-controller-next">
+                            <img src="images/right.png" alt="Next"> </img>
+                            </a>
                         </div>
                         <div id="gallery-navigation">&nbsp;</div>
+                    </div>
+                </li>
+                <li id="section-two">
+                    <div class="middle">
+                        <p><a href="#section-three">Go to page #03</a></p>
+                    </div>
+                </li>
+                <li id="section-three">
+                    <div class="middle">
+                        <p><a href="#section-three">Go to page #03</a></p>
                     </div>
                 </li>
             </ul>
