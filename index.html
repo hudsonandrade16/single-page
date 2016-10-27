@@ -8,35 +8,24 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/jquery.cycle.all.js"></script>
         <script type="text/javascript">
-        $(function() {
-            $('div#gallery ul').cycle({
-                timeout: 5,
-                prev: '#gallery-controller-prev',
-                next: '#gallery-controller-next',
-                pager: '#gallery-navigation',
-                pagerAnchorBuilder: function (idx, slide) {
-                    return '<li id="gallery-list" ><a href="#"><img src="images/circle.png" alt="Circle"> </img></a>   </li>';
-                }
-            });
-        });
-        </script>
-        <script type="text/javascript">
-        $(function() {
-            $('div#frases-banner ul').cycle({
-                timeout: 5
-            });
-        });
-        </script>
-
-        <script type="text/javascript">
-            jQuery(document).ready(function($) { 
+            $(function() {
+                // Gallery
+                $('div#gallery ul').cycle({
+                    timeout: 5,
+                    prev: '#gallery-controller-prev',
+                    next: '#gallery-controller-next',
+                    pager: '#gallery-navigation ul',
+                    pagerAnchorBuilder: function (idx, slide) {
+                        return '<li><a href="#">&nbsp;</a></li>';
+                    }
+                });
+                // Navigation
                 $(".scroll").click(function(event) {
                     event.preventDefault();
                     $('html, body').stop().animate({ scrollTop: $(this.hash).offset().top }, 800);
                 });
             });
-       </script>    
-
+        </script>
     </head>
     <body>
         <div id="nvgtion">
@@ -52,32 +41,45 @@
                     <div class="middle">
                         <div id="gallery">
                             <ul>
-                                <li><img src="images/figures-1690796_640.jpg" /></li>
-                                <li><img src="images/fog-1535201_640.jpg" /></li>
-                                <li><img src="images/forest-1598756_640.jpg" /></li>
-                                <li><img src="images/mouse-1708347_640.jpg" /></li>
+                                <li>
+                                    <div class="banner-phrase">
+                                        <h1> Seja a mudança </br>que o mundo precisa!</h1>
+                                    </div>
+                                    <div class="banner-image">
+                                        <img src="images/figures-1690796_640.jpg" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="banner-phrase">
+                                        <h1>Veja a mudança </br>que precisamos</h1>
+                                    </div>
+                                    <div class="banner-image">
+                                        <img src="images/fog-1535201_640.jpg" />
+                                    </div>
+                               </li>
+                                <li>
+                                    <div class="banner-phrase">
+                                        <h1>Sinta a mudança </br>que eles precisam!</h1>
+                                    </div>
+                                    <div class="banner-image">
+                                        <img src="images/forest-1598756_640.jpg" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="banner-phrase">
+                                        <h1>Tenha a mudança </br>que todoo mundo precisa!</h1>
+                                    </div>
+                                    <div class="banner-image">
+                                        <img src="images/mouse-1708347_640.jpg" />
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div id="banner">
-                            <div id="frases-banner">
-                                <ul>
-                                    <li><h1> Seja a mudança </br>que o mundo precisa!</h1></li>
-                                    <li><h1> Veja a mudança </br>que precisamos</h1></li>
-                                    <li><h1> Sinta a mudança </br>que eles precisam!</h1></li>
-                                    <li><h1> Tenha a mudança </br>que todoo mundo precisa!</h1></li>
-                                </ul>
-                            </div> 
-                           <input type="button" value="Saiba mais">   
-                        </div>
                         <div id="gallery-controller">
-                            <a href="#" id="gallery-controller-prev">
-                                <img src="images/left.png" alt="Prev"> </img>
-                            </a> 
-                            <a href="#" id="gallery-controller-next">
-                            <img src="images/right.png" alt="Next"> </img>
-                            </a>
+                            <a href="#" id="gallery-controller-prev"><img src="images/left.png" alt="Prev" /></a> 
+                            <a href="#" id="gallery-controller-next"><img src="images/right.png" alt="Next" /></a>
                         </div>
-                        <div id="gallery-navigation">&nbsp;</div>
+                        <div id="gallery-navigation"><ul>&nbsp;</ul></div>
                     </div>
                 </li>
                 <li id="section-two">
