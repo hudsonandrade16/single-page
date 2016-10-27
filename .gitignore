@@ -4,6 +4,7 @@
 #!! ERROR: netbean is undefined. Use list command to see defined gitignore types !!#
 
 ### NetBeans ###
+nbproject/
 nbproject/private/
 build/
 nbbuild/
