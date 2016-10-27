@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
     <head>
         <title>SinglePageApp</title>
@@ -21,6 +21,14 @@
         });
         </script>
         <script type="text/javascript">
+        $(function() {
+            $('div#frases-banner ul').cycle({
+                timeout: 5
+            });
+        });
+        </script>
+
+        <script type="text/javascript">
             jQuery(document).ready(function($) { 
                 $(".scroll").click(function(event) {
                     event.preventDefault();
@@ -34,8 +42,8 @@
         <div id="nvgtion">
             <ul id="menu">
                 <li><a href="#section-one" class="scroll">Home</a></li>
-                <li><a href="#section-two" class="scroll">Go to page #02</a></li>
-                <li><a href="#section-three" class="scroll">Go to page #03</a></li>
+                <li><a href="#section-two" class="scroll">Quem Somos</a></li>
+                <li><a href="#section-three" class="scroll">Contatos</a></li>
             </ul>
         </div>
         <div id="default">
@@ -51,7 +59,14 @@
                             </ul>
                         </div>
                         <div id="banner">
-                           <h1> Seja a mudança que o mundo precisa!</h1>  
+                            <div id="frases-banner">
+                                <ul>
+                                    <li><h1> Seja a mudança </br>que o mundo precisa!</h1></li>
+                                    <li><h1> Veja a mudança </br>que precisamos</h1></li>
+                                    <li><h1> Sinta a mudança </br>que eles precisam!</h1></li>
+                                    <li><h1> Tenha a mudança </br>que todoo mundo precisa!</h1></li>
+                                </ul>
+                            </div> 
                            <input type="button" value="Saiba mais">   
                         </div>
                         <div id="gallery-controller">
