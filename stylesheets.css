@@ -10,14 +10,14 @@ div#default > ul > li#section-three {background-color: green;}
 
 
 div#nvgtion { float: left; height: 30px; position: fixed; width: 100%; z-index: 20; }
-div#nvgtion ul {list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333333;}
-div#nvgtion ul li { float: left; list-style: none; }
+div#nvgtion ul {list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333333; text-align: center; font-size: 22px;}
+div#nvgtion ul li { list-style: none; display: inline-block; text-align: center; }
 div#nvgtion ul li a {display: block; color: white; text-align: center; padding: 10px; text-decoration: none;}
 div#nvgtion ul li a:hover { background-color: #111111; }
 
 
-div#banner { background-color: green; width: 50%; height: 100%; position: absolute; z-index: 40; opacity: 0.85;}
-div#banner h1 {color: white; font-family: Century; padding-top: 200px; padding-left: 10px; font-size: 40px;}
+div#banner { background-color: green; width: 50%; height: 100%; position: absolute; z-index: 19; opacity: 0.85;}
+div#banner h1 {color: white; font-family: Century; padding-top: 200px; padding-left: 20px; font-size: 40px;}
 div#banner input { background: none; width: 100px ; height: 45px; padding: 8px 15px;  color:white; margin-top: 100px; margin-left: 150px; border: 2px solid #999;}
 div#banner input:hover { background-color: white; color: #003300; }
 
@@ -36,4 +36,4 @@ a#gallery-controller-prev img{ width: 40px; height: 30px; position: absolute; le
 a#gallery-controller-next img{ width: 40px; height: 30px; position: absolute; left:815px; top: -215px;}
 div#gallery-navigation li.activeSlide { background-color: black;}
 
-div.middle {width: 800px;height: 600px;background-color: white;overflow: hidden;position: absolute;left: 50%;margin-left: -400px;top: 50%;margin-top: -300px;}
+div.middle {width: 800px;height: 600px;background-color: white;overflow: hidden;position: absolute;left: 50%;margin-left: -400px;top: 50%;margin-top: -300px; border-radius: 10px;}
